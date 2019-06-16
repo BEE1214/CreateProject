@@ -16,7 +16,7 @@ function createPr
   else
     cd /home/adam/Documents/FunProjects/$argv[1] 
   end
-  python /home/adam/Documents/FunProjects/python/createPr.py $argv[1] $argv[2]
+  python /home/adam/Documents/FunProjects/CreateProject/createPr.py $argv[1] $argv[2]
   chmod 744 $argv[1].$argv[2]
   ls -l
 end
