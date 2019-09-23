@@ -19,4 +19,5 @@ function createPr
   python /home/adam/Documents/FunProjects/CreateProject/createPr.py $argv[1] $argv[2]
   chmod 744 $argv[1].$argv[2]
   ls -l
+  code .
 end
