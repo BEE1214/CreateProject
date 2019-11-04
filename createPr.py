@@ -1,7 +1,7 @@
 ##=================================##
-##=-Project: CreateProject--------=##
-##=-Author: Adam Dvorsky----------=##
-##=-Date: 16/06/19 ---------------=##
+##=- Project: CreateProject ------=##
+##=- Author:   Adam Dvorsky ------=##
+##=- Date:         16/06/19 ------=##
 ##=================================##
 # import os
 from sys import argv
