@@ -4,7 +4,7 @@ Added bash script for bash and zsh comaptibility.
 
 `$createPr ProjectName ProjectLanguage`
 
-Laguage templates:
+Language templates:
 - bash script
 - c
 - cpp
