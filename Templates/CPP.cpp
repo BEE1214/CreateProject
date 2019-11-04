@@ -3,7 +3,7 @@
 //=-Author: Adam Dvorsky----------=//
 //=-Date: date -------------=//
 //=================================//
-// #include <stdio.h>
+#include <stdio.h>
 #include <iostream>
 
 
