@@ -1,7 +1,7 @@
 --=================================--
---=-Project: ProjectName-------------=--
---=-Author: Adam Dvorsky----------=--
---=-Date: date -------------=--
+--=-Project:         ProjectName -=--
+--=-Author:         Adam Dvorsky -=--
+--=-Date:              date -=--
 --=================================--
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

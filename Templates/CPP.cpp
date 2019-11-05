@@ -1,7 +1,7 @@
 //=================================//
-//=-Project: ProjectName-------------=//
-//=-Author: Adam Dvorsky----------=//
-//=-Date: date -------------=//
+//=-Project:         ProjectName -=//
+//=-Author:         Adam Dvorsky -=//
+//=-Date:              date -=//
 //=================================//
 #include <stdio.h>
 #include <iostream>
