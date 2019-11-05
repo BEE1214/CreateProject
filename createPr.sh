@@ -23,7 +23,7 @@ function createPr () {
 
         python ~/Documents/FunProjects/CreateProject/createPr.py $1 $2
 
-        if [ -f "$FILE" ]; then
+        if [ -f "$FILE" ]; then     # -e option to check if file exist. -f option to check if file exist and isn't folder or device
             chmod 744 $1.$2
             lsd -l --group-dirs first
             code .
