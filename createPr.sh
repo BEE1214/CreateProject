@@ -5,7 +5,7 @@ function createPr () {
     FOLDER=/home/adam/Documents/FunProjects/$1
     FILE=$1.$2
 
-    if [ -z "$1" ]; then 
+    if [ -z "$1" ]; then
         echo No arguments entered...
         echo Exiting...
     elif [ -z "$2" ]; then
@@ -16,18 +16,18 @@ function createPr () {
             mkdir ~/Documents/FunProjects/$1
             echo Creating folder $1...
             cd ~/Documents/FunProjects/$1
-        else
+        else;
             echo Moving to folder $1...
             cd ~/Documents/FunProjects/$1
         fi
 
         python ~/Documents/FunProjects/CreateProject/createPr.py $1 $2
-        
-        if [ -f "$FILE"]; then
+
+        if [ -f "$FILE" ]; then
             chmod 744 $1.$2
             lsd -l --group-dirs first
             code .
-        else
+        else;
             echo File $FILE does not exist...
             echo Exiting...
         fi
