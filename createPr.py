@@ -94,6 +94,7 @@ switcher = {
 'tex':latex,
 'c':clang
 }
+
 def main():
     FileChoice(argv[2])
     pass
