@@ -2,15 +2,21 @@
 
 function createPr () {
     # Check if arguments aren't empty
-    FOLDER=/home/adam/Documents/FunProjects/$1
     # if [ $# -eq 2 ]; then
     # elif [ $# -eq 1 ]; then
     
     # fi
 
-    if [[ $1 -eq "-h" ]]; then    #case $1 in
-        cat ~/Documents/FunProjects/CreateProject/help.txt
-    else
+    case $1 in
+        -h) if [[ $# -gt 1 ]]; then
+                echo "Wrong arguments"
+            else
+                cat ~/Documents/FunProjects/CreateProject/help.txt
+            fi
+        ;;
+
+        *)
+        FOLDER=/home/adam/Documents/FunProjects/$1
         FILE=$1.$2
         if [ -z "$1" ]; then
             echo No arguments entered...
@@ -28,7 +34,7 @@ function createPr () {
                 cd ~/Documents/FunProjects/$1
             fi
 
-            python ~/Documents/FunProjects/CreateProject/createPr.py $1 $2
+            python3 ~/Documents/FunProjects/CreateProject/createPr.py $1 $2
 
             if [ -f "$FILE" ]; then     # -e option to check if file exist. -f option to check if file exist and isn't folder or device
                 chmod 744 $1.$2
@@ -39,7 +45,8 @@ function createPr () {
                 echo Exiting...
             fi
         fi
-    fi
+        ;;
+    esac
 
         
 }
