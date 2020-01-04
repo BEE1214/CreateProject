@@ -4,7 +4,7 @@
         "titleBar.activeBackground": "#34451D",
         "titleBar.activeForeground": "#F9FBF6"
     },
-    "python.linting.pylintEnabled": false,
+    "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "python.linting.pycodestyleEnabled": true
+    "python.linting.pycodestyleEnabled": false
 }
