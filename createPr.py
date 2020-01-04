@@ -12,37 +12,37 @@ import os
 
 
 def py():
-    print(f'Creating {argv[1]}.{argv[2]}...')
+    print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
     FillFile("/home/adam/Documents/FunProjects/CreateProject/Templates/PYTHON.py", f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def sh():
-    print(f'Creating {argv[1]}.{argv[2]}...')
+    print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
     FillFile("/home/adam/Documents/FunProjects/CreateProject/Templates/BASH.sh", f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def cpp():
-    print(f'Creating {argv[1]}.{argv[2]}...')
+    print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
     FillFile("/home/adam/Documents/FunProjects/CreateProject/Templates/CPP.cpp", f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def vhd():
-    print(f'Creating {argv[1]}.{argv[2]}...')
+    print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
     FillFile("/home/adam/Documents/FunProjects/CreateProject/Templates/VHDL.vhd", f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def latex():
-    print(f'Creating {argv[1]}.{argv[2]}...')
+    print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
     FillFile("/home/adam/Documents/FunProjects/CreateProject/Templates/LATEX.tex", f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def clang():
-    print(f'Creating {argv[1]}.{argv[2]}...')
+    print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
     FillFile("/home/adam/Documents/FunProjects/CreateProject/Templates/CLANG.c", f'{argv[1]}.{argv[2]}')
     return argv[2]
@@ -69,7 +69,7 @@ def OpenFile(aFile, aMod):
     iName = aFile
     iFile = open(iName,str(aMod))
     if iFile:
-        print(f"File {aFile} opened...")
+        print(f"File {aFile} opened")
         return iFile
     else:
         print(f"Can\'t open {aFile}")
