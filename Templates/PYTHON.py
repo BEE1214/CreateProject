@@ -1,7 +1,7 @@
 ##=================================##
 ##=-Project:         ProjectName -=##
 ##=-Author:         Adam Dvorsky -=##
-##=-Date:              date -=##
+##=-Date:             date -=##
 ##=================================##
 
 import sys
