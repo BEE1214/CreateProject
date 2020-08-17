@@ -8,66 +8,65 @@ from sys import argv
 import datetime
 import re
 import os
+from pathlib import Path
 
-
+# Templates/PYTHON.py Templates
 
 def py():
+    iTemplate = '/home/adamd/FunProjects/CreateProject/Templates/PYTHON.py'
     print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
-    FillFile("/home/adam/Documents/FunProjects/CreateProject/Templates/PYTHON.py", f'{argv[1]}.{argv[2]}')
+    FillFile(iTemplate, f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def sh():
+    iTemplate = '/home/adamd/FunProjects/CreateProject/Templates/BASH.sh'
     print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
-    FillFile("/home/adam/Documents/FunProjects/CreateProject/Templates/BASH.sh", f'{argv[1]}.{argv[2]}')
+    FillFile(iTemplate, f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def cpp():
+    iTemplate = '/home/adamd/FunProjects/CreateProject/Templates/CPP.cpp'
     print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
-    FillFile("/home/adam/Documents/FunProjects/CreateProject/Templates/CPP.cpp", f'{argv[1]}.{argv[2]}')
+    FillFile(iTemplate, f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def vhd():
+    iTemplate = '/home/adamd/FunProjects/CreateProject/Templates/VHDL.vhd'
     print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
-    FillFile("/home/adam/Documents/FunProjects/CreateProject/Templates/VHDL.vhd", f'{argv[1]}.{argv[2]}')
+    FillFile(iTemplate, f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def latex():
+    iTemplate = '/home/adamd/FunProjects/CreateProject/Templates/LATEX.tex'
     print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
-    FillFile("/home/adam/Documents/FunProjects/CreateProject/Templates/LATEX.tex", f'{argv[1]}.{argv[2]}')
+    FillFile(iTemplate, f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def clang():
+    iTemplate = '/home/adamd/FunProjects/CreateProject/Templates/CLANG.c'
     print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
-    FillFile("/home/adam/Documents/FunProjects/CreateProject/Templates/CLANG.c", f'{argv[1]}.{argv[2]}')
+    FillFile(iTemplate, f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def FileChoice(aFormat):
     func = switcher.get(aFormat,lambda:'Wrong file format!')
     return func()
 
-def FileLenght(aFile):
-    with open(aFile) as iFile:
-        for iLines,l in enumerate(iFile):
-            pass
-    return iLines + 1
-
 def MakeFile(aFile):
-    iName = aFile
-    iFile = open(iName,"w+")
+    iFile = open(aFile,"w+")
     if iFile.close() != None:
-        eClose = 'Couldn\'t close the file.'
+        print(f'Couldn\'t close file {iFile}.')
     else:
         return 'Done'
 
 def OpenFile(aFile, aMod):
-    iName = aFile
-    iFile = open(iName,str(aMod))
+    iFile = open(aFile,str(aMod))
     if iFile:
         print(f"File {aFile} opened")
         return iFile
