@@ -1,5 +1,5 @@
 Usage:
-    createPr [command] [ProjectName] [FileTemplate]
+    createPr [optional]<command> <ProjectName> <FileTemplate>
 Command:
     -h     show this help
 File Templates:
