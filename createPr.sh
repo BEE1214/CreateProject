@@ -1,22 +1,22 @@
 #!/bin/bash
+#
+PROJECTFOLDER=$HOME/Projects
+PERSONAL=$PROJECTFOLDER/personal
+SANEZOO=$PROJECTFOLDER/sanezoo
 
+#TODO switch between personal and sanezoo
 function createPr () {
-    # Check if arguments aren't empty
-    # if [ $# -eq 2 ]; then
-    # elif [ $# -eq 1 ]; then
-    
-    # fi
 
     case $1 in
         -h) if [[ $# -gt 1 ]]; then
                 echo "Wrong arguments"
             else
-                cat ~/FunProjects/CreateProject/help.txt
+                cat $PERSONAL/CreateProject/help.txt
             fi
         ;;
 
         *)
-        FOLDER=%HOME/FunProjects/$1
+        FOLDER=$PERSONAL/$1
         FILE=$1.$2
         if [ -z "$1" ]; then
             echo No arguments entered...
@@ -26,15 +26,15 @@ function createPr () {
             echo Exiting...
         else
             if [ ! -d "$FOLDER" ]; then
-                mkdir ~/FunProjects/$1
+                mkdir -p $PERSONAL/$1
                 echo Creating folder $1...
-                cd ~/FunProjects/$1
+                cd $PERSONAL/$1
             else;
                 echo Moving to folder $1...
-                cd ~/FunProjects/$1
+                cd $PERSONAL/$1
             fi
 
-            python3 ~/FunProjects/CreateProject/createPr.py $1 $2
+            python3 $PERSONAL/CreateProject/createPr.py $1 $2
 
             if [ -f "$FILE" ]; then     # -e option to check if file exist. -f option to check if file exist and isn't folder or device
                 chmod 744 $1.$2
