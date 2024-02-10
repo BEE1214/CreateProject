@@ -11,44 +11,45 @@ import os
 from pathlib import Path
 
 # Templates/PYTHON.py Templates
+TEMPLATEFOLDER: str = "/home/adamd/Projects/personal/CreateProject/Templates/"
 
 def py():
-    iTemplate = '/home/adamd/FunProjects/CreateProject/Templates/PYTHON.py'
+    iTemplate = TEMPLATEFOLDER + 'PYTHON.py'
     print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
     FillFile(iTemplate, f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def sh():
-    iTemplate = '/home/adamd/FunProjects/CreateProject/Templates/BASH.sh'
+    iTemplate = TEMPLATEFOLDER + 'BASH.sh'
     print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
     FillFile(iTemplate, f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def cpp():
-    iTemplate = '/home/adamd/FunProjects/CreateProject/Templates/CPP.cpp'
+    iTemplate = TEMPLATEFOLDER + 'CPP.cpp'
     print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
     FillFile(iTemplate, f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def vhd():
-    iTemplate = '/home/adamd/FunProjects/CreateProject/Templates/VHDL.vhd'
+    iTemplate = TEMPLATEFOLDER + 'VHDL.vhd'
     print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
     FillFile(iTemplate, f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def latex():
-    iTemplate = '/home/adamd/FunProjects/CreateProject/Templates/LATEX.tex'
+    iTemplate = TEMPLATEFOLDER + 'LATEX.tex'
     print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
     FillFile(iTemplate, f'{argv[1]}.{argv[2]}')
     return argv[2]
 
 def clang():
-    iTemplate = '/home/adamd/FunProjects/CreateProject/Templates/CLANG.c'
+    iTemplate = TEMPLATEFOLDER + 'CLANG.c'
     print(f'Creating {argv[1]}.{argv[2]}')
     print(MakeFile(f'{argv[1]}.{argv[2]}'))
     FillFile(iTemplate, f'{argv[1]}.{argv[2]}')

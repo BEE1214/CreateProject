@@ -5,7 +5,7 @@ PERSONAL=$PROJECTFOLDER/personal
 SANEZOO=$PROJECTFOLDER/sanezoo
 
 #TODO switch between personal and sanezoo
-function createPr () {
+# function createPr () {
 
     case $1 in
         -h) if [[ $# -gt 1 ]]; then
@@ -25,22 +25,17 @@ function createPr () {
             echo Second argument is empty...
             echo Exiting...
         else
-            if [ ! -d "$FOLDER" ]; then
-                mkdir -p $PERSONAL/$1
-                echo Creating folder $1...
-                cd $PERSONAL/$1
-            else;
-                echo Moving to folder $1...
-                cd $PERSONAL/$1
-            fi
+            mkdir -p $PERSONAL/$1
+            echo Creating folder $1...
+            cd $PERSONAL/$1
 
             python3 $PERSONAL/CreateProject/createPr.py $1 $2
 
             if [ -f "$FILE" ]; then     # -e option to check if file exist. -f option to check if file exist and isn't folder or device
                 chmod 744 $1.$2
-                lsd -l --group-dirs first
+                ls -l --group-dirs first
                 code .
-            else;
+            else
                 echo File $FILE does not exist...
                 echo Exiting...
             fi
@@ -49,4 +44,4 @@ function createPr () {
     esac
 
         
-}
+# }
